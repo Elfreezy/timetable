@@ -1,2 +1,2 @@
 worker: python main.py
-heroku config:add TZ="Europe/Moscow"
+config:add TZ="Europe/Moscow"
