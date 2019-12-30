@@ -28,7 +28,8 @@ def get_request(connect, number_of_group):
             cursor = connect.cursor()
             cursor.execute("""select time, nameobj, auditorium, week from timetable where number=""" + str(number_of_group) + """ and day=""" + str(now))
             info = cursor.fetchall()
-        return info
+        # return info
+        return(str(datetime.now))
     except:
         return 0
 
@@ -37,7 +38,7 @@ def get_connection(number_of_group):
     connect = psycopg2.connect(
         database="db9ffeo3f1039r",
         user="heetupgqnhaysy",
-        password=os.environ.get('DATABASE_PSW'),
+        password="3c112f195b75854016039d9c9833efe22c279262b9326ac4079e8b1b6a6585c0",
         host="ec2-23-21-148-109.compute-1.amazonaws.com",
         port="5432",
     )
