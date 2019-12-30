@@ -29,7 +29,7 @@ def get_request(connect, number_of_group):
             cursor.execute("""select time, nameobj, auditorium, week from timetable where number=""" + str(number_of_group) + """ and day=""" + str(now))
             info = cursor.fetchall()
         # return info
-        return(str(datetime.now))
+        return(str(datetime.now()))
     except:
         return 0
 
